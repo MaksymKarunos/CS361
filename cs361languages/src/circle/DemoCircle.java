@@ -26,7 +26,7 @@ public class DemoCircle {
 		System.out.println("c - x = " + c.centerX + " y = " + c.centerY );
 		System.out.println("cc - x = " + cc.centerX + " y = " + cc.centerY );
 		
-		c.draw(); 	// Drawing a Circle... 
+		c.draw(); 	// Drawing a Ciarcle... 
 					// draw method from Circle
 		
 		// Upcasting
