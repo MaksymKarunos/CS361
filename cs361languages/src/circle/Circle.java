@@ -2,6 +2,7 @@
  * 
  */
 package circle;
+import java.lang.Cloneable; 
 
 /**
  * @author Maksym Karunos	
@@ -10,7 +11,7 @@ package circle;
 
 // TODO Complete the code
 
-public class Circle extends GraphicObject {
+public class Circle extends GraphicObject implements Cloneable {
 
 	// No use of encapsulation
 	public double centerX, centerY;
@@ -87,10 +88,13 @@ public class Circle extends GraphicObject {
 	 */
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		Circle c = (Circle)super.clone(); 
-		c.centerX = this.centerX;
-		c.centerY = this.centerY;
-		c.radius = this.radius;
+		Object c = null;
+		try {
+			c = super.clone();
+		}
+		catch(CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
 		return c;
 	}
 

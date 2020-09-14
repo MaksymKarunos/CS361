@@ -55,13 +55,13 @@ public class DemoCircle {
 		c2.radius = 6.0;
 		
 		// TODO print c1 with toString
-		System.out.print(c1.toString());
+		System.out.println(c1.toString());
 		// TODO print c2 with toString
-		System.out.print(c2.toString());
+		System.out.println(c2.toString());
 		// TODO make a deep copy of c1 with clone and assign it to c3
-		Circle c3 = (Circle)c1.clone();
+		Circle c3 = (Circle) c1.clone();
 		// TODO write a conditional that checks that c3.equals(c1) is true and print "c3.equals(c1) is true" or "c3.equals(c1) is false" otherwise
-		System.out.println(c3.equals(c1) ? "c3.equals(c1 is ture)" : "c3.equals(c1) is false");
+		System.out.println(c3.equals(c1) ? "c3.equals(c1) is ture" : "c3.equals(c1) is false");
 	}
 
 }

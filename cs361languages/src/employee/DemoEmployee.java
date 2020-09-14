@@ -32,25 +32,26 @@ public class DemoEmployee {
 		System.out.println("emp3");
 		emp3.whoAmI();
 		// TODO To complete
-		// emp3.whoAmI() // prints ... because ...
-		// emp3.getHourlyRate(); // returns syntax error because ...
+		// emp3.whoAmI() // prints PART TIME EMPLOYEE because we are assigning part time employee object to the emp1
+		// emp3.getHourlyRate(); // returns syntax error because you cannot access child specific members but you can
+		// access methods.
 
 		// TODO To complete
 		// Add the condition that test that emp3 is an instance of part time employee at
 		// this time
-		// if (CONDITION) {
-		// System.out.println("emp3 instance of part time employee"); // printed
-		// } else {
-		System.out.println("emp3 not instance of part time employee");
-		// }
+		if (emp3 instanceof PartTimeEmployee) {
+			System.out.println("emp3 instance of part time employee"); // printed
+		} else {
+			System.out.println("emp3 not instance of part time employee");
+		}
 
 		// Downcasting 1
 		// TODO Uncomment and run the code
-		// PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
 		// TODO To complete
-		// This instruction compiles / does not compile
+		// This instruction does not compile
 		// This instruction returns a ClassCastException at run time
-		// because ...
+		// because we cast parent to its child class type.
 
 		// Downcasting 2
 		// Requires the use of intanceof to avoid a run time cast exception
