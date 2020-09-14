@@ -69,10 +69,8 @@ public class MyStack<T> {
 		Person p2 = new Person("Christelle", "Scharff");
 		myPerson.push(p1);
 		myPerson.push(p2);
-		System.out.println(myPerson.pop());
-		// Create a stack of Person
-		// Push a person p1 with your name
-		// Push a person p2 with my name
+		myPerson.pop();
+
 	}
 
 }

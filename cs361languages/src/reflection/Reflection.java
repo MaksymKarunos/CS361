@@ -3,6 +3,7 @@
  */
 package reflection;
 
+
 /**
  * @author ADD YOUR NAME 
  *
@@ -16,7 +17,6 @@ package reflection;
 // and the list of methods of the class
 
 // Complete the code
-
 import java.lang.reflect.Method;
 
 public class Reflection {
@@ -46,6 +46,16 @@ public class Reflection {
 		// TODO To complete
 		// You need to use the EXACT format of the output
 		// Hint: Use the method getSuperClass()
+		// Similar structure to linked list
+		Class current = o.getClass();
+		// Print the head
+		System.out.print(current.getName());
+		while ( current.getSuperclass() != null ){
+			System.out.print(" inherits from " + current.getSuperclass().getName());
+			// moving to the next node
+			current = current.getSuperclass();
+		}
+		System.out.println("\n");
 	}
 	
 	/**
@@ -62,6 +72,9 @@ public class Reflection {
 		// TODO To complete
 		// Print each method on one line
 		// Use this EXACT format
+		for (Method method : m ) {
+			System.out.println(m.toString());
+		}
 		System.out.println("\n");
 	}
 
@@ -81,9 +94,17 @@ public class Reflection {
 		
 		// Demonstration of the methods on an objet of type String
 		// TODO To complete
+		String frog = new String("I love frogs");
+		r.listMethods(frog);
+		r.inheritanceChain(frog);
 		
 		// Demonstration of the methods on an objet of type ColoredCircle
 		// TODO To complete		
+		
+		circle.ColoredCircle circle = new circle.ColoredCircle();
+		
+		r.listMethods(circle);
+		r.inheritanceChain(circle);
 	}
 
 }
