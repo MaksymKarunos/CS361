@@ -73,7 +73,7 @@ public class Reflection {
 		// Print each method on one line
 		// Use this EXACT format
 		for (Method method : m ) {
-			System.out.println(m.toString());
+			System.out.println(method.toString());
 		}
 		System.out.println("\n");
 	}
